@@ -13,6 +13,7 @@ private:
 	FreeList _freeLists[NFREELIST];
 };
 
+
 // static保持当前文件可见
 // TLS thread local storage
 static __declspec(thread) ThreadCache* pTLSThreadCache = nullptr;
