@@ -4,6 +4,7 @@ void* ThreadCache::FetchFromCentralCache(size_t index, size_t alignSize)
 {
 	return nullptr;
 }
+
 void* ThreadCache::Allocate(size_t size)
 {
 	assert(size <= MAX_BYTES);
@@ -19,6 +20,7 @@ void* ThreadCache::Allocate(size_t size)
 		return FetchFromCentralCache(index, alignSize);
 	}
 }
+
 void ThreadCache::Deallocate(void* ptr, size_t size)
 {
 	assert(ptr);
